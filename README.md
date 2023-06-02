@@ -5,7 +5,7 @@ CIKM-2022.
 
 ## Citations
 
-If you use or extend our work, please cite our paper at CHIL-2023.
+If you use or extend our work, please cite our paper at CIKM-2022.
 ```
 @inproceedings{10.1145/3511808.3557341,
 author = {Wu, Yuexin and Huang, Xiaolei},
