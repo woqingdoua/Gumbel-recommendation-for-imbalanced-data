@@ -98,25 +98,25 @@ if __name__ == '__main__':
         batch = dataloader.Batch(train_data, test_data,user_dict,item_dict, u_max, i_max, batch_size, review_len,train=True) #(review_len是一条评论的长度)
 
         if args.base_model == 'NARRE':
-            mainmodel = kbs_model.NARRE(num_users,num_items,matrix,review_len,args)
+            mainmodel = model.NARRE(num_users,num_items,matrix,review_len,args)
 
         elif args.base_model == 'PMF':
-            mainmodel = kbs_model.PMF(num_users,num_items,args)
+            mainmodel = model.PMF(num_users,num_items,args)
 
         elif args.base_model == 'D_Att' :
-            mainmodel = kbs_model.D_Att(matrix,num_users,num_items,review_len,args)
+            mainmodel = model.D_Att(matrix,num_users,num_items,review_len,args)
 
         elif args.base_model == 'DeepConn':
-            mainmodel = kbs_model.DeepConn(matrix, num_users, num_items, review_len, args)
+            mainmodel = model.DeepConn(matrix, num_users, num_items, review_len, args)
 
         elif args.base_model == 'NCF':
-            mainmodel = kbs_model.NCF(num_users,num_items,args)
+            mainmodel = model.NCF(num_users,num_items,args)
 
         elif args.base_model == 'NRPA':
-            mainmodel = kbs_model.NRPA(num_users,num_items,matrix, review_len, args)
+            mainmodel = model.NRPA(num_users,num_items,matrix, review_len, args)
 
         elif args.base_model == 'ANR':
-            mainmodel = kbs_model.ANR(matrix,num_users,num_items, args)
+            mainmodel = model.ANR(matrix,num_users,num_items, args)
 
         if use_cuda:
             mainmodel = mainmodel.cuda(args.device)
