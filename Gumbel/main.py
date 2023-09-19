@@ -1,12 +1,11 @@
 import argparse
 import dataloader
-import kbs_model
+import model
 from tqdm import tqdm
 import torch.nn as nn
 import torch
 import random
 import numpy as np
-import model_file
 import pickle
 import torch.nn.functional as F
 
